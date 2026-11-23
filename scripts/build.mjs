@@ -81,13 +81,54 @@ function generateHTML(data) {
     cert => cert.titulo && !isProvisionalText(cert.titulo) && !isProvisionalText(cert.institucion)
   );
 
+  // Favicon SVG en data-URI (monograma YM)
+  const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f3a5f"/><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="1">YM</text></svg>`;
+  const faviconDataUri = `data:image/svg+xml;utf8,${encodeURIComponent(faviconSvg)}`;
+
+  // Schema.org JSON-LD para perfil Person
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: nombre,
+    jobTitle: cargo,
+    email: contacto.email || data.email,
+    sameAs: [contacto.linkedin].filter(Boolean),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Santo Domingo',
+      addressCountry: 'República Dominicana'
+    }
+  };
+
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Currículum Vitae de ${nombre} - ${cargo}">
+  <meta name="theme-color" content="#1f3a5f">
   <title>${nombre} | ${cargo}</title>
+
+  <!-- Favicon Monograma Inline -->
+  <link rel="icon" type="image/svg+xml" href="${faviconDataUri}">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="${nombre} | ${cargo}">
+  <meta property="og:description" content="Currículum Vitae de ${nombre} - ${cargo}">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="es_DO">
+  <meta property="og:site_name" content="${nombre} - CV Profesional">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${nombre} | ${cargo}">
+  <meta name="twitter:description" content="Currículum Vitae de ${nombre} - ${cargo}">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+${JSON.stringify(personSchema, null, 2)}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
