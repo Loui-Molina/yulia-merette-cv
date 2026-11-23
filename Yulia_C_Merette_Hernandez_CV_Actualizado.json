@@ -1,0 +1,234 @@
+{
+  "document": {
+    "title": "Professional CV Profile",
+    "version": "Updated",
+    "language": "es",
+    "target_position": "Operations & Project Coordination"
+  },
+  "personal_information": {
+    "full_name": "Yulia C. Merette Hernandez",
+    "professional_headline": "Operations & Project Coordination",
+    "location": {
+      "city": "Santo Domingo",
+      "country": "República Dominicana"
+    },
+    "email": "visoramediadr@gmail.com",
+    "linkedin_url": "https://www.linkedin.com/in/yulia-merette-a440961b7"
+  },
+  "professional_summary": "Profesional con más de 5 años de experiencia en servicio al cliente internacional, administración y soporte operativo. Experiencia en seguimiento de casos y procesos, gestión documental, coordinación de clientes, organización de tareas y apoyo a proyectos. Como cofundadora de VISORA Media, ha gestionado procesos administrativos de la empresa y coordinado proyectos para marcas, incluyendo planificación de contenido, producción audiovisual y coordinación de equipos. Cuenta con inglés avanzado para entornos administrativos y profesionales.",
+  "career_objective": {
+    "primary": "Operations Coordinator",
+    "related_roles": [
+      "Project Coordinator",
+      "Operations & Administrative Coordinator",
+      "Project Management Assistant",
+      "Event Operations Coordinator",
+      "Administrative Operations Specialist"
+    ],
+    "focus_areas": [
+      "Coordinación de operaciones",
+      "Coordinación y seguimiento de proyectos",
+      "Gestión administrativa y documental",
+      "Coordinación de equipos y proveedores",
+      "Logística y producción de eventos",
+      "Seguimiento de tareas, plazos y entregables"
+    ]
+  },
+  "core_competencies": [
+    "Coordinación de proyectos y seguimiento de entregables",
+    "Coordinación de equipos y crew de producción",
+    "Gestión administrativa y documental",
+    "Organización de procesos, agendas y prioridades",
+    "Atención y gestión de clientes",
+    "Seguimiento de casos, incidencias y acciones correctivas",
+    "Registro, validación y manejo de datos",
+    "Comunicación profesional y coordinación interdepartamental",
+    "Planificación de contenido y producción audiovisual",
+    "Organización de información comercial y documentación"
+  ],
+  "professional_experience": [
+    {
+      "company": "Thryv",
+      "job_title": "Senior Client Care Advocate | Disputes",
+      "start_date": "2025-02-25",
+      "end_date": null,
+      "employment_status": "Por confirmar si continúa actualmente",
+      "responsibilities": [
+        "Gestionar y dar seguimiento a casos, consultas y disputas de clientes en un entorno de servicio internacional.",
+        "Revisar cuentas, historial de servicio, facturación y documentación de respaldo.",
+        "Registrar hallazgos, acciones correctivas, ajustes y responsables de cada caso.",
+        "Coordinar con equipos internos y dar seguimiento a los casos hasta su resolución.",
+        "Utilizar sistemas CRM y plataformas internas para documentar información y mantener la trazabilidad de los casos."
+      ]
+    },
+    {
+      "company": "VISORA Media",
+      "job_title": "Co-fundadora | Gestión Administrativa y Coordinación de Proyectos",
+      "start_date": null,
+      "end_date": null,
+      "employment_status": "Proyecto propio / fecha de inicio por confirmar",
+      "responsibilities": [
+        "Gestionar procesos administrativos de la empresa y organizar documentación e información comercial.",
+        "Coordinar y dar seguimiento a proyectos, clientes, tareas, fechas y entregables.",
+        "Organizar propuestas, catálogos de servicios, materiales comerciales y comunicaciones con clientes.",
+        "Planificar contenido y coordinar la producción para marcas y proyectos digitales.",
+        "Dar seguimiento a las necesidades de clientes y a la ejecución de los servicios de la agencia."
+      ],
+      "company_url": "https://www.instagram.com/visoramediadr/"
+    },
+    {
+      "company": "Guardian Protection Products",
+      "job_title": "Data Entry Representative",
+      "start_date": "2024-09",
+      "end_date": null,
+      "employment_status": "Fecha de salida por confirmar",
+      "responsibilities": [
+        "Ingresar, actualizar y verificar datos en sistemas internos.",
+        "Organizar registros y revisar información para mantener la precisión y consistencia.",
+        "Cumplir procedimientos establecidos y mantener atención al detalle en tareas administrativas."
+      ]
+    },
+    {
+      "company": "SimonMed Imaging",
+      "job_title": "Scheduling Analyst",
+      "start_date": "2021-05",
+      "end_date": "2022-04",
+      "responsibilities": [
+        "Coordinar y programar citas según disponibilidad y necesidades del paciente.",
+        "Actualizar información y comunicar instrucciones relevantes.",
+        "Gestionar llamadas y dar seguimiento para facilitar una experiencia organizada."
+      ]
+    },
+    {
+      "company": "Teleperformance",
+      "job_title": "Customer Service Representative",
+      "start_date": null,
+      "end_date": null,
+      "employment_status": "Fechas y título exacto por confirmar",
+      "responsibilities": [
+        "Experiencia en servicio al cliente dentro de un entorno de atención internacional.",
+        "Atención de consultas y apoyo en la resolución de solicitudes de clientes."
+      ]
+    }
+  ],
+  "selected_projects": [
+    {
+      "project": "Rancho Doña Chea (RDC)",
+      "role": "Producción audiovisual y coordinación de crew",
+      "contributions": [
+        "Responsable de la producción integral de los videos.",
+        "Coordinación y manejo del crew durante las jornadas de producción.",
+        "Planificación y organización de contenido audiovisual para la marca."
+      ],
+      "portfolio_url": "https://www.instagram.com/ranchod.chea/"
+    },
+    {
+      "project": "YMCH Construcciones",
+      "role": "Apoyo en presencia digital y coordinación de contenido",
+      "contributions": [
+        "Apoyo en la gestión de presencia digital de la marca.",
+        "Coordinación de contenido y materiales de comunicación."
+      ],
+      "portfolio_url": "https://www.instagram.com/ymchconstrucciones/"
+    },
+    {
+      "project": "VISORA Media RD",
+      "role": "Co-fundadora y gestión administrativa",
+      "contributions": [
+        "Gestión administrativa de la empresa.",
+        "Organización de procesos y documentación.",
+        "Coordinación de proyectos y servicios de marketing."
+      ],
+      "portfolio_url": "https://www.instagram.com/visoramediadr/"
+    }
+  ],
+  "education": [
+    {
+      "program": "Medicina",
+      "institution": "UTESA",
+      "status": "Estudios universitarios en curso"
+    }
+  ],
+  "certifications_and_professional_training": [
+    {
+      "certificate": "Técnico en Primeros Auxilios",
+      "issuing_organization": "Fundación FRANGRA"
+    },
+    {
+      "certificate": "Asistente Médico",
+      "issuing_organization": "Fundación FRANGRA"
+    },
+    {
+      "certificate": "Administración",
+      "issuing_organization": "Thryv"
+    },
+    {
+      "certificate": "Inteligencia Artificial (AI)",
+      "issuing_organization": "Thryv"
+    },
+    {
+      "certificate": "Senior Client Care",
+      "issuing_organization": "Thryv"
+    },
+    {
+      "certificate": "Cursos de CRM, marketing, servicio al cliente y producción",
+      "issuing_organization": "Formación profesional / cursos realizados"
+    },
+    {
+      "certificate": "Cursos complementarios",
+      "issuing_organization": "Coursera",
+      "course_names": "Por completar con los nombres exactos"
+    }
+  ],
+  "digital_tools": {
+    "project_management_and_organization": [
+      "ClickUp",
+      "Jira",
+      "Airtable"
+    ],
+    "crm_and_operations": [
+      "Salesforce",
+      "HubSpot"
+    ],
+    "analytics_and_marketing": [
+      "Tableau",
+      "Google Analytics 4 (GA4)"
+    ],
+    "productivity_and_collaboration": [
+      "Microsoft Word",
+      "Microsoft Excel",
+      "Microsoft PowerPoint",
+      "Google Docs",
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "design_and_automation": [
+      "Canva",
+      "Figma",
+      "Zapier"
+    ]
+  },
+  "languages": [
+    {
+      "language": "Español",
+      "proficiency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "proficiency": "Avanzado; comunicación administrativa y profesional"
+    }
+  ],
+  "additional_profile_details": {
+    "total_experience": "Más de 5 años en servicio al cliente internacional y administración",
+    "event_and_production_experience": "Producción audiovisual integral y coordinación de crew para contenido de Rancho Doña Chea",
+    "academic_field": "Medicina"
+  },
+  "verification_items_before_sending_cv": [
+    "Confirmar mes y año de inicio de VISORA Media.",
+    "Confirmar si Thryv continúa como empleo actual o agregar fecha de salida.",
+    "Completar fecha de salida de Guardian Protection Products.",
+    "Confirmar fechas y cargo exacto de Teleperformance.",
+    "Confirmar nombres exactos y fechas de cursos de Coursera y certificaciones de Thryv.",
+    "Agregar logros cuantificables de proyectos, producción, coordinación y operaciones cuando estén disponibles."
+  ]
+}

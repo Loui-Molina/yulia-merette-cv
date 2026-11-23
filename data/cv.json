@@ -1,0 +1,182 @@
+{
+  "nombre": "Yulia C. Merette Hernandez",
+  "cargo": "Operations & Project Coordination",
+  "email": "visoramediadr@gmail.com",
+  "resumen": "Profesional con más de 5 años de experiencia en servicio al cliente internacional, administración y soporte operativo. Experiencia en seguimiento de casos y procesos, gestión documental, coordinación de clientes, organización de tareas y apoyo a proyectos. Como cofundadora de VISORA Media, ha gestionado procesos administrativos de la empresa y coordinado proyectos para marcas, incluyendo planificación de contenido, producción audiovisual y coordinación de equipos. Cuenta con inglés avanzado para entornos administrativos y profesionales.",
+  "contacto": {
+    "ubicacion": "Santo Domingo, República Dominicana",
+    "email": "visoramediadr@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/yulia-merette-a440961b7",
+    "linkedin_display": "linkedin.com/in/yulia-merette-a440961b7"
+  },
+  "experiencia": [
+    {
+      "empresa": "Thryv",
+      "cargo": "Senior Client Care Advocate | Disputes",
+      "periodo": "02/2025 – Presente",
+      "responsabilidades": [
+        "Gestionar y dar seguimiento a casos, consultas y disputas de clientes en un entorno de servicio internacional.",
+        "Revisar cuentas, historial de servicio, facturación y documentación de respaldo.",
+        "Registrar hallazgos, acciones correctivas, ajustes y responsables de cada caso.",
+        "Coordinar con equipos internos y dar seguimiento a los casos hasta su resolución.",
+        "Utilizar sistemas CRM y plataformas internas para documentar información y mantener la trazabilidad de los casos."
+      ]
+    },
+    {
+      "empresa": "VISORA Media",
+      "cargo": "Co-fundadora | Gestión Administrativa y Coordinación de Proyectos",
+      "url": "https://www.instagram.com/visoramediadr/",
+      "url_display": "instagram.com/visoramediadr",
+      "periodo": "",
+      "responsabilidades": [
+        "Gestionar procesos administrativos de la empresa y organizar documentación e información comercial.",
+        "Coordinar y dar seguimiento a proyectos, clientes, tareas, fechas y entregables.",
+        "Organizar propuestas, catálogos de servicios, materiales comerciales y comunicaciones con clientes.",
+        "Planificar contenido y coordinar la producción para marcas y proyectos digitales.",
+        "Dar seguimiento a las necesidades de clientes y a la ejecución de los servicios de la agencia."
+      ]
+    },
+    {
+      "empresa": "Guardian Protection Products",
+      "cargo": "Data Entry Representative",
+      "periodo": "Desde 09/2024",
+      "responsabilidades": [
+        "Ingresar, actualizar y verificar datos en sistemas internos.",
+        "Organizar registros y revisar información para mantener la precisión y consistencia.",
+        "Cumplir procedimientos establecidos y mantener atención al detalle en tareas administrativas."
+      ]
+    },
+    {
+      "empresa": "SimonMed Imaging",
+      "cargo": "Scheduling Analyst",
+      "periodo": "05/2021 – 04/2022",
+      "responsabilidades": [
+        "Coordinar y programar citas según disponibilidad y necesidades del paciente.",
+        "Actualizar información y comunicar instrucciones relevantes.",
+        "Gestionar llamadas y dar seguimiento para facilitar una experiencia organizada."
+      ]
+    },
+    {
+      "empresa": "Teleperformance",
+      "cargo": "Customer Service Representative",
+      "periodo": "",
+      "responsabilidades": [
+        "Experiencia en servicio al cliente dentro de un entorno de atención internacional.",
+        "Atención de consultas y apoyo en la resolución de solicitudes de clientes."
+      ]
+    }
+  ],
+  "proyectos": [
+    {
+      "nombre": "Rancho Doña Chea (RDC)",
+      "rol": "Producción audiovisual y coordinación de crew",
+      "url": "https://www.instagram.com/ranchod.chea/",
+      "url_display": "instagram.com/ranchod.chea",
+      "contribuciones": [
+        "Responsable de la producción integral de los videos.",
+        "Coordinación y manejo del crew durante las jornadas de producción.",
+        "Planificación y organización de contenido audiovisual para la marca."
+      ]
+    },
+    {
+      "nombre": "YMCH Construcciones",
+      "rol": "Apoyo en presencia digital y coordinación de contenido",
+      "url": "https://www.instagram.com/ymchconstrucciones/",
+      "url_display": "instagram.com/ymchconstrucciones",
+      "contribuciones": [
+        "Apoyo en la gestión de presencia digital de la marca.",
+        "Coordinación de contenido y materiales de comunicación."
+      ]
+    },
+    {
+      "nombre": "VISORA Media RD",
+      "rol": "Co-fundadora y gestión administrativa",
+      "url": "https://www.instagram.com/visoramediadr/",
+      "url_display": "instagram.com/visoramediadr",
+      "contribuciones": [
+        "Gestión administrativa de la empresa.",
+        "Organización de procesos y documentación.",
+        "Coordinación de proyectos y servicios de marketing."
+      ]
+    }
+  ],
+  "formacion": [
+    {
+      "programa": "Medicina",
+      "institucion": "Universidad Tecnológica de Santiago (UTESA)",
+      "estado": "Estudios universitarios en curso"
+    }
+  ],
+  "competencias_categorias": [
+    {
+      "categoria": "Coordinación y Operaciones",
+      "habilidades": [
+        "Coordinación de proyectos y entregables",
+        "Coordinación de equipos y crew de producción",
+        "Gestión administrativa y documental",
+        "Organización de procesos, agendas y prioridades"
+      ]
+    },
+    {
+      "categoria": "Atención y Gestión de Clientes",
+      "habilidades": [
+        "Atención y gestión de clientes internacionales",
+        "Seguimiento de casos, incidencias y disputas",
+        "Comunicación profesional e interdepartamental",
+        "Registro, validación y manejo de datos"
+      ]
+    },
+    {
+      "categoria": "Herramientas de Gestión y CRM",
+      "habilidades": [
+        "ClickUp, Jira, Airtable",
+        "Salesforce, HubSpot",
+        "Google Workspace, Microsoft Office"
+      ]
+    },
+    {
+      "categoria": "Analítica, Creatividad y Automatización",
+      "habilidades": [
+        "Tableau, Google Analytics 4 (GA4)",
+        "Planificación de contenido y producción",
+        "Canva, Figma, Zapier"
+      ]
+    }
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "Avanzado (profesional y administrativo)"
+    }
+  ],
+  "certificaciones": [
+    {
+      "titulo": "Técnico en Primeros Auxilios",
+      "institucion": "Fundación FRANGRA"
+    },
+    {
+      "titulo": "Asistente Médico",
+      "institucion": "Fundación FRANGRA"
+    },
+    {
+      "titulo": "Administración",
+      "institucion": "Thryv"
+    },
+    {
+      "titulo": "Inteligencia Artificial (AI)",
+      "institucion": "Thryv"
+    },
+    {
+      "titulo": "Senior Client Care",
+      "institucion": "Thryv"
+    },
+    {
+      "titulo": "Cursos de CRM, Marketing y Producción",
+      "institucion": "Formación profesional continua"
+    }
+  ]
+}
