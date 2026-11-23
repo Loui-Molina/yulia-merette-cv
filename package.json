@@ -1,0 +1,24 @@
+{
+  "name": "yulia-merette-cv",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Currículum Vitae profesional de Yulia C. Merette Hernandez - Versión Web y PDF A4 ATS-friendly",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npx serve dist -l 3000"
+  },
+  "keywords": [
+    "cv",
+    "curriculum",
+    "ats-friendly",
+    "playwright",
+    "pdf"
+  ],
+  "author": "Yulia C. Merette Hernandez",
+  "license": "MIT",
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.50.1",
+    "serve": "^14.2.4"
+  }
+}
