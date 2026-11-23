@@ -81,8 +81,8 @@ function generateHTML(data) {
     cert => cert.titulo && !isProvisionalText(cert.titulo) && !isProvisionalText(cert.institucion)
   );
 
-  // Favicon SVG en data-URI (monograma YM)
-  const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f3a5f"/><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="1">YM</text></svg>`;
+  // Favicon SVG en data-URI (monograma YM con acentos de color)
+  const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f3a5f"/><rect y="54" width="64" height="10" fill="#c4caff"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="28" fill="#fff9c4" letter-spacing="1">YM</text></svg>`;
   const faviconDataUri = `data:image/svg+xml;utf8,${encodeURIComponent(faviconSvg)}`;
 
   // Schema.org JSON-LD para perfil Person
@@ -150,6 +150,8 @@ ${JSON.stringify(personSchema, null, 2)}
     :root {
       --color-primary: #1f3a5f;
       --color-primary-light: #2c5282;
+      --color-accent-periwinkle: #c4caff;
+      --color-accent-yellow: #fff9c4;
       --color-text: #1f2933;
       --color-text-muted: #4b5563;
       --color-border: #cbd5e1;
@@ -213,6 +215,7 @@ ${JSON.stringify(personSchema, null, 2)}
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 3px solid var(--color-accent-periwinkle);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
 
@@ -220,6 +223,20 @@ ${JSON.stringify(personSchema, null, 2)}
       font-weight: 600;
       font-size: 1rem;
       letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .web-action-bar .brand-badge {
+      display: inline-block;
+      background-color: var(--color-accent-yellow);
+      color: var(--color-text);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
     }
 
     .btn-download {
@@ -266,8 +283,19 @@ ${JSON.stringify(personSchema, null, 2)}
     /* Header Section (~22% prominence) */
     .cv-header {
       background: var(--color-white);
-      border-bottom: 2px solid var(--color-primary);
+      border-bottom: 2px solid var(--color-accent-periwinkle);
       padding: 24px 32px 18px 32px;
+      position: relative;
+    }
+
+    .cv-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-accent-periwinkle) 0%, var(--color-accent-yellow) 100%);
     }
 
     .header-top {
@@ -354,7 +382,7 @@ ${JSON.stringify(personSchema, null, 2)}
       color: var(--color-primary);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      border-bottom: 1.5px solid var(--color-primary);
+      border-bottom: 2px solid var(--color-accent-periwinkle);
       padding-bottom: 4px;
       margin-top: 16px;
       margin-bottom: 10px;
@@ -411,9 +439,12 @@ ${JSON.stringify(personSchema, null, 2)}
     }
 
     .item-period {
-      font-size: 8pt;
-      font-weight: 500;
-      color: var(--color-text-muted);
+      font-size: 7.8pt;
+      font-weight: 600;
+      color: var(--color-text);
+      background-color: var(--color-accent-yellow);
+      padding: 1.5px 7px;
+      border-radius: 4px;
       white-space: nowrap;
       text-align: right;
     }
@@ -446,7 +477,11 @@ ${JSON.stringify(personSchema, null, 2)}
     .category-name {
       font-size: 8.5pt;
       font-weight: 700;
-      color: var(--color-primary-light);
+      color: var(--color-primary);
+      background-color: var(--color-accent-periwinkle);
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
       margin-bottom: 4px;
     }
 
@@ -479,8 +514,14 @@ ${JSON.stringify(personSchema, null, 2)}
     }
 
     .language-level {
-      color: var(--color-text-muted);
-      font-size: 8pt;
+      color: var(--color-text);
+      background-color: var(--color-accent-yellow);
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 7.5pt;
+      font-weight: 600;
+      margin-top: 2px;
     }
 
     .cert-item {
@@ -635,7 +676,10 @@ ${JSON.stringify(personSchema, null, 2)}
 
   <!-- Web Top Bar -->
   <nav class="web-action-bar" aria-label="Barra de acciones del currículum">
-    <div class="brand">${nombre} &bull; CV Profesional</div>
+    <div class="brand">
+      <span>${nombre} &bull; CV Profesional</span>
+      <span class="brand-badge">A4 ATS</span>
+    </div>
     <a href="${PDF_FILENAME}" download="${PDF_FILENAME}" class="btn-download" title="Descargar versión PDF optimizada para A4 e impresión" aria-label="Descargar currículum en formato PDF">
       Descargar CV en PDF
     </a>
