@@ -140,6 +140,13 @@ ${JSON.stringify(personSchema, null, 2)}
       padding: 0;
     }
 
+    h1, h2, h3, h4 {
+      margin: 0;
+      padding: 0;
+      font-weight: inherit;
+      font-size: inherit;
+    }
+
     :root {
       --color-primary: #1f3a5f;
       --color-primary-light: #2c5282;
@@ -159,6 +166,40 @@ ${JSON.stringify(personSchema, null, 2)}
       font-size: 9.5pt;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Skip to Content Link (a11y) */
+    .skip-link {
+      position: absolute;
+      top: -9999px;
+      left: 16px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 10px 18px;
+      z-index: 1000;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: top 0.15s ease-in-out;
+    }
+
+    .skip-link:focus-visible,
+    .skip-link:focus {
+      top: 12px;
+      outline: 2px solid var(--color-white);
+      outline-offset: 2px;
+    }
+
+    /* Focus States (:focus-visible) */
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    main:focus {
+      outline: none;
     }
 
     /* Web Action Bar */
@@ -202,6 +243,12 @@ ${JSON.stringify(personSchema, null, 2)}
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
 
+    .btn-download:focus-visible {
+      outline: 2px solid var(--color-white);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px var(--color-primary-light);
+    }
+
     /* Document Sheet (A4 Layout) */
     .document-wrapper {
       max-width: 210mm;
@@ -242,7 +289,6 @@ ${JSON.stringify(personSchema, null, 2)}
       font-weight: 600;
       color: var(--color-text-muted);
       letter-spacing: 0.02em;
-      text-transform: uppercase;
     }
 
     .header-contact {
@@ -343,6 +389,7 @@ ${JSON.stringify(personSchema, null, 2)}
     }
 
     .item-title {
+      display: inline;
       font-size: 9.5pt;
       font-weight: 700;
       color: var(--color-primary);
@@ -401,7 +448,6 @@ ${JSON.stringify(personSchema, null, 2)}
       font-weight: 700;
       color: var(--color-primary-light);
       margin-bottom: 4px;
-      text-transform: capitalize;
     }
 
     .skill-list {
@@ -491,7 +537,8 @@ ${JSON.stringify(personSchema, null, 2)}
         font-size: 9pt;
       }
 
-      .web-action-bar {
+      .web-action-bar,
+      .skip-link {
         display: none !important;
       }
 
@@ -583,13 +630,16 @@ ${JSON.stringify(personSchema, null, 2)}
   </style>
 </head>
 <body>
+  <!-- Visually hidden Skip to main content link for keyboard users -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <!-- Web Top Bar -->
-  <header class="web-action-bar" aria-label="Acciones de Currículum">
+  <nav class="web-action-bar" aria-label="Barra de acciones del currículum">
     <div class="brand">${nombre} &bull; CV Profesional</div>
-    <a href="${PDF_FILENAME}" download="${PDF_FILENAME}" class="btn-download" title="Descargar versión PDF optimizada para A4 e impresión">
+    <a href="${PDF_FILENAME}" download="${PDF_FILENAME}" class="btn-download" title="Descargar versión PDF optimizada para A4 e impresión" aria-label="Descargar currículum en formato PDF">
       Descargar CV en PDF
     </a>
-  </header>
+  </nav>
 
   <div class="document-wrapper">
     <article class="cv-container">
@@ -601,15 +651,15 @@ ${JSON.stringify(personSchema, null, 2)}
         </div>
         <div class="header-contact">
           ${contacto.ubicacion ? `<div class="contact-item"><span class="contact-label">Ubicación:</span> ${contacto.ubicacion}</div>` : ''}
-          ${contacto.email ? `<div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:${contacto.email}">${contacto.email}</a></div>` : ''}
-          ${contacto.linkedin ? `<div class="contact-item"><span class="contact-label">LinkedIn:</span> <a href="${contacto.linkedin}" target="_blank" rel="noopener noreferrer">${contacto.linkedin_display || contacto.linkedin}</a></div>` : ''}
+          ${contacto.email ? `<div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:${contacto.email}" aria-label="Enviar correo electrónico a ${contacto.email}">${contacto.email}</a></div>` : ''}
+          ${contacto.linkedin ? `<div class="contact-item"><span class="contact-label">LinkedIn:</span> <a href="${contacto.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de ${nombre} (abre en una nueva pestaña)">${contacto.linkedin_display || contacto.linkedin}</a></div>` : ''}
         </div>
       </header>
 
       <!-- Cuerpo del CV a 2 Columnas -->
       <div class="cv-body">
         <!-- Columna Principal (68%) -->
-        <main class="main-column">
+        <main id="main-content" class="main-column" tabindex="-1">
           <!-- Resumen Profesional -->
           <section class="cv-section" aria-labelledby="sec-resumen">
             <h2 id="sec-resumen" class="section-title">Perfil Profesional</h2>
@@ -623,9 +673,9 @@ ${JSON.stringify(personSchema, null, 2)}
               <div class="cv-item">
                 <div class="item-header">
                   <div>
-                    <span class="item-title">${exp.cargo}</span>
+                    <h3 class="item-title">${exp.cargo}</h3>
                     <span class="item-company"> &bull; ${exp.empresa}</span>
-                    ${exp.url ? `<a href="${exp.url}" target="_blank" rel="noopener noreferrer" class="item-url">${exp.url_display || 'Enlace'}</a>` : ''}
+                    ${exp.url ? `<a href="${exp.url}" target="_blank" rel="noopener noreferrer" class="item-url" aria-label="Sitio web de ${exp.empresa} (abre en una nueva pestaña)">${exp.url_display || 'Enlace'}</a>` : ''}
                   </div>
                   ${exp.periodo ? `<span class="item-period">${exp.periodo}</span>` : ''}
                 </div>
@@ -646,9 +696,9 @@ ${JSON.stringify(personSchema, null, 2)}
                 <div class="cv-item">
                   <div class="item-header">
                     <div>
-                      <span class="item-title">${proj.nombre}</span>
+                      <h3 class="item-title">${proj.nombre}</h3>
                       <span class="item-company"> &bull; ${proj.rol}</span>
-                      ${proj.url ? `<a href="${proj.url}" target="_blank" rel="noopener noreferrer" class="item-url">${proj.url_display || 'Enlace'}</a>` : ''}
+                      ${proj.url ? `<a href="${proj.url}" target="_blank" rel="noopener noreferrer" class="item-url" aria-label="Sitio web de ${proj.nombre} (abre en una nueva pestaña)">${proj.url_display || 'Enlace'}</a>` : ''}
                     </div>
                   </div>
                   ${proj.contribuciones && proj.contribuciones.length ? `
@@ -666,7 +716,7 @@ ${JSON.stringify(personSchema, null, 2)}
             <h2 id="sec-formacion" class="section-title">Formación Académica</h2>
             ${cleanFormacion.map(edu => `
               <div class="education-item">
-                <div class="edu-degree">${edu.programa}</div>
+                <h3 class="edu-degree">${edu.programa}</h3>
                 <div class="edu-school">${edu.institucion}</div>
                 ${edu.estado ? `<div class="edu-status">${edu.estado}</div>` : ''}
               </div>
@@ -681,7 +731,7 @@ ${JSON.stringify(personSchema, null, 2)}
             <h2 id="sec-competencias" class="section-title">Competencias</h2>
             ${competencias_categorias.map(cat => `
               <div class="sidebar-category">
-                <div class="category-name">${cat.categoria}</div>
+                <h3 class="category-name">${cat.categoria}</h3>
                 <ul class="skill-list">
                   ${cat.habilidades.map(hab => `<li>${hab}</li>`).join('')}
                 </ul>
@@ -695,7 +745,7 @@ ${JSON.stringify(personSchema, null, 2)}
               <h2 id="sec-idiomas" class="section-title">Idiomas</h2>
               ${idiomas.map(lang => `
                 <div class="language-item">
-                  <div class="language-name">${lang.idioma}</div>
+                  <h3 class="language-name">${lang.idioma}</h3>
                   <div class="language-level">${lang.nivel}</div>
                 </div>
               `).join('')}
@@ -708,7 +758,7 @@ ${JSON.stringify(personSchema, null, 2)}
               <h2 id="sec-certificaciones" class="section-title">Certificaciones</h2>
               ${cleanCertificaciones.map(cert => `
                 <div class="cert-item">
-                  <div class="cert-title">${cert.titulo}</div>
+                  <h3 class="cert-title">${cert.titulo}</h3>
                   <div class="cert-issuer">${cert.institucion}</div>
                 </div>
               `).join('')}
